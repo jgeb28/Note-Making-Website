@@ -1,4 +1,6 @@
 <x-layout>
-    <h1>Welcome</h1>
+    <div class="welcome">
+        <h1>Welcome to this marvelous note taking web application </h1>
+    </div>
 </x-layout>
 

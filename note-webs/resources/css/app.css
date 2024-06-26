@@ -2,6 +2,18 @@
     box-sizing: border-box;
     font-family: Verdana, Helvetica, sans-serif;
   }
+
+  .welcome {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .welcome h1 {
+    color: #007bff;
+    text-decoration: none;
+  }
+
   .note-container {
     max-width: 980px;
     margin: 0 auto;
@@ -42,6 +54,8 @@
     margin: 0 auto;
   }
   .note {
+    display: flex;
+    flex-direction: column;
     background-color: #f0c806;
     border-radius: 8px;
     width: 280px;
@@ -56,6 +70,7 @@
   .note .note-body {
     outline: 0;
     font-family: 'Caveat', cursive;
+    flex: 1;
     font-size: 24px;
     padding: 10px 16px 16px;
   }
@@ -91,36 +106,36 @@
     justify-content: end;
   }
   
-  .note-buttons .note-cancel-button {
-    padding: 6px 10px;
-    border-radius: 4px;
-    background-color: #e0e0e0;
-    border: 1px solid #bdbdbd;
-    transition: all 0.3s;
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    display: inline-block;
-    font-size: 16px;
-  }
-  .note-buttons .note-cancel-button:hover {
-    background-color: #ffffff;
-  }
-  
-  .note-buttons .note-submit-button {
+  .note-cancel-button {
     padding: 6px 10px;
     border-radius: 4px;
     color: white;
-    background-color: #452900;
-    border: 1px solid #212000;
+    background-color: #c93f3f;
+    border: 1px solid #a82f2f;
     transition: all 0.3s;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
   }
-  .note-buttons .note-submit-button:hover {
-    background-color: #704300;
+  .note-cancel-button:hover {
+    background-color: #a82f2f;
+  }
+  
+  .note-submit-button {
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: #006bd6;
+    border: 1px solid #0059b3;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .note-submit-button:hover {
+    background-color: #0059b3;;
   }
   
   .note-header {
@@ -216,4 +231,99 @@
     pointer-events: none;
     background-color: #f8f9fa;
     border-color: #dee2e6;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  margin-left: 20px;
+  font-size: 1em;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Register and Login */
+
+.auth-container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.auth-container h1 {
+  color: #007bff;
+  font-weight: normal;
+}
+
+.auth-container input {
+  border: none;
+  border-radius: 5px;
+  background-color: #7bb9fc;
+  height: 40px;
+  font-size: 18px;
+}
+
+.auth-container span {
+  color: white;
+  font-size: 18px;
+}
+
+.auth {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 8px;
+  width: 280px;
+  margin: 0 10px 20px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1e1e1e;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.auth-error {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.auth-error ul{
+  border-radius: 8px;
+  width: 280px;
+  margin: 0 10px 20px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  background-color: #ff5858;
+  flex-direction: column;
+}
+
+.auth-error li {
+  text-decoration: none;
 }

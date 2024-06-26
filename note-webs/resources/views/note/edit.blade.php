@@ -9,7 +9,7 @@
             </textarea>
             <div class="note-buttons">
                 <a href="{{ route('note.index') }}" class="note-cancel-button">Cancel</a>
-                <button class="note-subnut-button">Submit</button>
+                <button class="note-submit-button">Submit</button>
             </div>
         </form>
     </div>
