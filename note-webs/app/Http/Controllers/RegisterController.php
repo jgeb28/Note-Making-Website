@@ -14,8 +14,8 @@ class RegisterController extends Controller
     public function submit() {
         $validator = validator(request()->all(), [
             'email' => ['required', 'email', 'unique:users'],
-            'name' => ['string', 'required', 'unique:users'],
-            'password' => ['string', 'required', 'confirmed'],
+            'name' => ['required', 'string', 'unique:users'],
+            'password' => ['required', 'string', 'confirmed'],
         ]);
 
         if($validator->fails()) {
