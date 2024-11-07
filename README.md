@@ -12,6 +12,7 @@ Open PowerShell in Windows or Terminal in Linux and write commands below:
 - cp .env.example .env
 - ./vendor/bin/sail up -d
 - ./vendor/bin/sail artisan migrate
+
 Now you can access the website at address localhost.
 #
 There is basic account with 100 random generated notes\
